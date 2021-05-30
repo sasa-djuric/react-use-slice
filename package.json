@@ -1,0 +1,56 @@
+{
+	"name": "react-use-slice",
+	"version": "1.0.0",
+	"description": "A react hook to use reducers with an API like createSlice from Redux toolkit, in a typesafe way, with performance in mind.",
+	"main": "index.js",
+	"scripts": {
+		"build": "node ./scripts/build.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"files": [
+		"**/*"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sasa-djuric/react-use-slice.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [
+		"react",
+		"hook",
+		"redux",
+		"toolkit",
+		"create",
+		"slice",
+		"reducer",
+		"state"
+	],
+	"author": "Saša Đurić",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sasa-djuric/react-use-slice/issues"
+	},
+	"homepage": "https://github.com/sasa-djuric/react-use-slice#readme",
+	"peerDependencies": {
+		"react": "^16.8.0"
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.8",
+		"@typescript-eslint/eslint-plugin": "^4.25.0",
+		"@typescript-eslint/parser": "^4.25.0",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^7.27.0",
+		"eslint-config-react-app": "^6.0.0",
+		"eslint-plugin-flowtype": "^5.7.2",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-jest": "^24.0.0",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"eslint-plugin-testing-library": "^3.9.0",
+		"react": "^16.8.0",
+		"typescript": "^4.3.2"
+	}
+}
