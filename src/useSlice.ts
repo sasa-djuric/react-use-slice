@@ -63,16 +63,18 @@ export function createSlice<State, CaseReducers extends SliceCaseReducers<State>
 	return slice;
 }
 
-export function useSlice<State, CaseReducers extends SliceCaseReducers<State>>({
+function useSlice<State, CaseReducers extends SliceCaseReducers<State>>({
 	name,
 	initialState,
 	reducers
 }: Slice<State, CaseReducers>): [State, Actions<CaseReducers>] {
 	const reducer = useMemo(() => generateReducer(reducers), []);
 	const [state, dispatch] = useReducer(reducer, initialState);
-	const actions = useMemo(() => generateActions(reducers, dispatch), []);
+	const actions = useMemo(() => generateActions(reducers, dispatch), [reducers]);
 
 	useDebugValue(name);
 
 	return [state, actions];
 }
+
+export default useSlice;
