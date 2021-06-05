@@ -1,4 +1,4 @@
-import { Dispatch, useDebugValue, useMemo, useReducer } from 'react';
+import { Dispatch, useDebugValue, useMemo, useReducer, useRef } from 'react';
 
 export type CaseReducer<State, Action = any> = (state: State, action: Action) => State;
 type PayloadAction<Payload = any> = { type: string; payload: Payload };
@@ -68,9 +68,10 @@ function useSlice<State, CaseReducers extends SliceCaseReducers<State>>({
 	initialState,
 	reducers
 }: Slice<State, CaseReducers>): [State, Actions<CaseReducers>] {
-	const reducer = useMemo(() => generateReducer(reducers), []);
+	const reducersRef = useRef(reducers);
+	const reducer = useMemo(() => generateReducer(reducersRef.current), []);
 	const [state, dispatch] = useReducer(reducer, initialState);
-	const actions = useMemo(() => generateActions(reducers, dispatch), [reducers]);
+	const actions = useMemo(() => generateActions(reducersRef.current, dispatch), []);
 
 	useDebugValue(name);
 
