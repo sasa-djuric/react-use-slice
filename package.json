@@ -11,7 +11,12 @@
 		"prepare": "husky install"
 	},
 	"files": [
-		"**/*"
+		"useSlice.js",
+		"useSlice.d.ts",
+		"README.md",
+		"package.json",
+		"index.js",
+		"index.d.ts"
 	],
 	"repository": {
 		"type": "git",
