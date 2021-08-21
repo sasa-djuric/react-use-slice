@@ -43,8 +43,10 @@ jobs:
             - name: Build
               run: npm run build
 
+            - name: Install husky
+              run: npm install husky
+
             - name: Publish
               run: cd lib && npm publish --access=public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-                  CI: false
