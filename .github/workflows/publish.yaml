@@ -46,10 +46,7 @@ jobs:
             - name: Install husky
               run: cd lib && npm install husky
 
-            - name: Login on npm
-              run: npm login
-
             - name: Publish
-              run: npm publish --access=public
+              run: npm publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
