@@ -14,8 +14,17 @@ export interface Slice<
 	State = any,
 	CaseReducers extends SliceCaseReducers<State> = SliceCaseReducers<State>
 > {
+	/**
+	 * The slice name. Used in devtools.
+	 */
 	name?: string;
+	/**
+	 * The slice's initial state.
+	 */
 	initialState: State;
+	/**
+	 * The slice's reducer.
+	 */
 	reducers: CaseReducers;
 }
 
