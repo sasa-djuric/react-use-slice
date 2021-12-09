@@ -1,6 +1,6 @@
 {
 	"name": "react-use-slice",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A react hook to use reducers with an API like createSlice from Redux toolkit, in a typesafe way, with performance in mind.",
 	"main": "index.js",
 	"scripts": {
