@@ -45,7 +45,7 @@
 		"*.+(ts|tsx)": "eslint --fix"
 	},
 	"peerDependencies": {
-		"react": "^16.8.0"
+		"react": ">=16.8.0"
 	},
 	"devDependencies": {
 		"@testing-library/react-hooks": "^7.0.0",
